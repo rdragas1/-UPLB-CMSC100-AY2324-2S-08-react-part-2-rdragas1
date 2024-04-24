@@ -4,21 +4,18 @@ import RemoveButton from "./RemoveButton";
 
 function CartList(props) {
     let cartList = props.state;
+    let uniqueList = [...new Set(cartList)];
 
-    
-
-
-    
   return (
     <div id="cart-list">
       <span> Shopping Cart Quantity: {cartList.length}</span>
         
       <ul id="added-list"> 
-      {cartList.map((item)=>{
+      {uniqueList.map((item)=>{
         return (
           <li key={item}>
             <span id="added-name"> {item}</span>
-            <span> QTY 1 </span>
+            <span> QTY {props.quantityfunc(props.state, item)} </span>
             <RemoveButton name={item} state={cartList} statefunction={props.statefunction}/>
           </li>
         );

@@ -7,6 +7,7 @@ import { useState } from "react";
 function App() {
 
   const [cart, updateCart] = useState([]);
+  
 
   return (
     <div>
@@ -18,7 +19,7 @@ function App() {
         <MenuList data={menus} />
 
       </div>
-      <CartList state={cart} statefunction={updateCart} />
+      <CartList state={cart} statefunction={updateCart} quantityfunc={countDuplicates} />
       <div id="content">
         <div id="banner-container">
           <img
@@ -57,6 +58,22 @@ function App() {
 }
 
 export default App;
+
+function countDuplicates(array, elementToCount) {
+  let count = 0;
+  array.forEach(function (element) {
+    if (element === elementToCount) {
+      count++;
+    }
+  });
+  return count;
+}
+
+var pushcart = [];
+
+export function getCart () {
+  return pushcart;
+}
 
 const menus = [
   { name: "Appliances", url: "#Appliances", id: 1 },

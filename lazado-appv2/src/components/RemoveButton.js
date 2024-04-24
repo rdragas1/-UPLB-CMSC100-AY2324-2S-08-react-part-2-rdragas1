@@ -1,11 +1,17 @@
 import React from "react";
+import { getCart } from "../App";
 
 function RemoveButton(props) {
 
   const handleClick = () => {
-    let arr = [...props.state]
-    arr = arr.filter((item) => item !== props.name);
-    props.statefunction(arr);
+
+    const indexToRemove = getCart().indexOf(props.name);
+    if (indexToRemove !== -1) {
+      getCart().splice(indexToRemove, 1);
+      props.statefunction(getCart());
+    }
+    console.log(getCart());
+    console.log(props.state);
   };
 
   return (

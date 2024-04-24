@@ -1,11 +1,12 @@
 import React from "react";
+import { getCart } from "../App";
 
 function AddtoCartButton(props) {
   const handleClick = () => {
     console.log("Added " + props.name + " to the cart!");
-    pushcart.push(props.name);
-    props.statefunction([...pushcart]);
+    getCart().push(props.name);
 
+    props.statefunction([...getCart()]);
   };
 
   return (
@@ -14,7 +15,5 @@ function AddtoCartButton(props) {
     </button>
   );
 }
-
-var pushcart = [];
 
 export default AddtoCartButton;
