@@ -1,0 +1,141 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: whitesmoke;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+#header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#menu-list {
+  list-style-type: none;
+  justify-content: space-between;
+  position: relative;
+  top: 10px;
+  width: 40vw;
+  margin-right: 12vw;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#menu-list > li > a {
+  text-decoration: none;
+  color: #39271d;
+}
+
+#header > img {
+  margin-left: 12vw;
+  height: 100%;
+}
+
+#cart-btn {
+  background-image: url(https://icons.iconarchive.com/icons/iconsmind/outline/512/Shopping-Cart-icon.png);
+  background-size: cover;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  left: 94%;
+  top: 25%;
+  position: absolute;
+}
+
+#cart-list {
+  height:100px;
+  width: 22vw;
+  background-color: white;
+  position: sticky;
+  top:120px;
+  left: 76vw;
+  display: flex;
+  z-index: 101;
+
+}
+
+#content {
+  position: relative;
+  margin-left: 12vw;
+  margin-right: 24vw;
+  margin-top: -80px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+#content * > li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: white;
+  width: 15vw;
+  border: 0.5px solid whitesmoke;
+  padding: 10px;
+  height: 300px;
+}
+
+#content * > h1 {
+  font-size: 24px;
+  margin-bottom: 0;
+  background-color: white;
+  font-weight: 400;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px;
+  scroll-margin-top: 150px;
+  
+}
+
+#content * > li > img {
+  align-self: center;
+  height: 130px;
+}
+
+#content * > li > span {
+  height: 30px;
+}
+
+#product-list {
+  margin-top: 0;
+}
+
+#product-list > li > #price {
+  font-size: 20px;
+  color: brown;
+  font-weight: 500;
+}
+
+#add-to-cart-btn {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: white;
+  color: #a68a6d;
+  cursor: pointer;
+  font-size: larger;
+  padding: 5px;
+  border-radius: 20px;
+  border-width: 2px;
+  width: 10vw;
+  border-color: #a68a6d;
+}
+
+#add-to-cart-btn:hover {
+  background-color: #a68a6d;
+  color: white;
+  border-color: #a68a6d;
+}
