@@ -1,5 +1,4 @@
 import "./App.css";
-import CartButton from "./components/CartButton";
 import MenuList from "./components/MenuList";
 import ProductList from "./components/ProductList";
 import CartList from "./components/CartList";
@@ -17,9 +16,9 @@ function App() {
           alt="lazado logo"
         ></img>
         <MenuList data={menus} />
-        <CartButton data={[]} />
+
       </div>
-      <CartList data={cart} />
+      <CartList state={cart} statefunction={updateCart} />
       <div id="content">
         <div id="banner-container">
           <img

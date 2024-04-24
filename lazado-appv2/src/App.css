@@ -55,15 +55,28 @@ ul {
 }
 
 #cart-list {
-  height:100px;
+  height:auto;
   width: 22vw;
   background-color: white;
   position: sticky;
   top:120px;
   left: 76vw;
   display: flex;
+  flex-direction: column;
   z-index: 101;
 
+}
+
+#added-list{
+  display: flex;
+  flex-direction: column;
+}
+
+#added-list > li {
+  font-size: 14px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #content {
